@@ -48,19 +48,6 @@ AgeCare es el proyecto de capstone para el título de Ingeniero Informático en 
 
 ---
 
-## Estructura del Proyecto
-
-```
-agecare/
-├── docs/              # Documentación del proyecto
-├── src/               # Código fuente
-├── tests/             # Pruebas unitarias e integración
-├── deployment/        # Configuración de despliegue
-└── README.md          # Este archivo
-```
-
----
-
 ## Arquitectura
 
 AgeCare está compuesto por tres frentes de desarrollo con datos compartidos del paciente:
