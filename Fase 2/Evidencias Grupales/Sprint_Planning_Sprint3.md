@@ -5,7 +5,7 @@
 > **Contraparte Empresarial:** Alloxentric / Wellq Co  
 > **Fase:** 2 — Desarrollo Proyecto APT (Sprint 3)  
 > **Sprint Jira:** SPRINT 3 "Bitácora y comunic." (ID 10, estado: future)  
-> **Período:** 2 semanas (timeboxed)  
+> **Período:** 1 semana (timeboxed)  
 > **Versión:** 1.1  
 > **Fecha:** Octubre 2026  
 > **Estado:** Revisado — Ajuste de alcance y carga de trabajo
@@ -14,7 +14,7 @@
 
 ## 1. Contexto y entrada del Sprint
 
-### 1.1 Estado del Sprint 2 (verificado en Jira)
+### 1.1 Estado del Sprint 2
 
 El Sprint 2 "Salud, medicamentos A" (ID 9) se cerró completamente:
 
@@ -26,23 +26,17 @@ El Sprint 2 "Salud, medicamentos A" (ID 9) se cerró completamente:
 | Asignación | César Gacitúa, Felipe Varas, Claudia Iosue, Franco Barra |
 | Claves Jira | DAC05-3, 6, 10, 12, 14, 15, 16, 111 |
 
-### 1.2 Sprint 3 ya existe en Jira
+### 1.2 Sprint 3 
 
 | Campo | Valor |
 |-------|-------|
 | Nombre | SPRINT 3 "Bitácora y comunic." |
 | ID | 10 |
 | Estado | future |
-| Goal Jira | "Que la cuidadora opere su jornada completa (check-in, observaciones, relevo) y que familiar/cuidadora puedan comunicarse por chat en tiempo real — cerrando aquí el 100% del alcance Must del proyecto" |
-| Fecha inicio | 2026-10-12 |
-| Fecha fin | 2026-10-26 |
+| Goal Jira | **"Que la cuidadora opere su jornada completa (check-in, observaciones, relevo) y que familiar/cuidadora puedan comunicarse por chat en tiempo real"** |
+| Fecha inicio | 2026-10-17 |
+| Fecha fin | 2026-10-23 |
 
-### 1.3 Regla de gobernanza aplicada
-
-- **No crear nuevos issues.** Se refactorizan los 11 issues existentes (DAC05-11 a DAC05-25).
-- **Top-down:** Primero User Stories, luego subtareas técnicas.
-- **Vertical Slicing:** Cada historia toca al menos 2 capas técnicas (UI + API + DB, o similar).
-- **No épicas técnicas horizontales.** El trabajo transversal se gestiona como Technical Enabler en DAC05-97.
 
 ---
 
@@ -50,7 +44,7 @@ El Sprint 2 "Salud, medicamentos A" (ID 9) se cerró completamente:
 
 > *"El equipo entrega la bitácora de cuidado y comunicación de cuidadoras (check-in, observaciones, relevo, chat), junto con alertas críticas (SOS, caídas, umbrales), todo con Vertical Slicing end-to-end y CI/CD refinado, manteniendo la trazabilidad DoD al 100%."*
 
-**Alineación:** Cierra el núcleo de medicación (Sprint 2) y lleva el sistema a un entorno real con notificaciones en tiempo real, alineado con la propuesta de valor de Alloxentric (paz mental al familiar) y con los entregables académicos RA2/RA3.
+**Alineación:** Cierra el núcleo de medicación (Sprint 2, alcance Must del proyecto) y lleva el sistema a un entorno real con notificaciones en tiempo real, alineado con la propuesta de valor de Alloxentric (paz mental al familiar) y con los entregables académicos RA2/RA3.
 
 ---
 
@@ -458,9 +452,8 @@ Una historia no se considera Done sin cumplir el 100%:
 |--------|---------|------------|
 | Scope creep (solicitudes Alloxentric fuera del goal) | Alto | Registrar en Product Backlog para Sprint 4 |
 | César sobrecargado (3 roles) | Medio | Delegar tareas técnicas a Felipe y Franco desde el día 1 |
-| Despliegue Azure fallido | Alto | Validar Bicep en entorno dev antes del Sprint Review |
 | WebSocket no funcional | Medio | Probar con endpoint de prueba antes de integrar al frontend |
-| Sobreestimación de puntos | Medio | Recalibrar compromisos en la reunión de Planning |
+| Sobreestimación de puntos (impacto en velocity) | Medio | Recalibrar compromisos en la reunión de Planning |
 
 ---
 
@@ -478,26 +471,16 @@ Una historia no se considera Done sin cumplir el 100%:
 
 | Compromiso | Responsable | Fecha límite |
 |------------|-------------|--------------|
-| Validar DoR/DoD en las 7 historias antes del Planning | Scrum Master (César) | Inicio Sprint 3 |
+| Validar DoR/DoD en las 7 historias antes del Planning | César Gacitúa | Inicio Sprint 3 |
 | Despliegue en Azure Container Apps validado | César Gacitúa | Fin Sprint 3 |
 | Notificación push SOS (FCM/APNs) | Franco Barra | Fin Sprint 3 |
 | Documentación OpenAPI completa | Claudia Iosue | Medio Sprint 3 |
 | Delegación de tareas backend desde SM role | César Gacitúa | Inicio Sprint 3 |
 
----
-
-## 13. Aprobación
-
-| Rol | Nombre | Firma | Fecha |
-|-----|--------|-------|-------|
-| Product Owner | Claudia Iosue | | |
-| Scrum Master | César Gacitúa | | |
-| Desarrollo | Franco Barra | | |
-| Desarrollo | Felipe Varas | | |
 
 ---
 
-## 14. Notas y cambios vs. versión anterior
+## 13. Notas y cambios vs. versión anterior
 
 | Cambio | Detalle |
 |--------|---------|
@@ -509,6 +492,3 @@ Una historia no se considera Done sin cumplir el 100%:
 | DAC05-11 Padre | Corregido: DAC05-100 (Vitals, wearable y semáforo) |
 | Claves de subtarea | Usadas claves nuevas (DAC05-226 a 259), sin reutilizar DAC05-84/85/86 |
 
----
-
-> **Nota:** Este documento se basa en la evidencia real del workspace AgeCare (código fuente, documentación del equipo, reglas de gobernanza en `/.agents/`) y en el estado verificado del tablero Jira de AgeCare (proyecto DAC05, Sprint 3 ID 10). Las claves Jira citadas deben confirmarse contra el tablero real antes de la entrega académica final.
