@@ -93,11 +93,11 @@ Entonces el sistema muestra un estado "sin datos" y permite cargar vitales
 **Subtareas (Vertical Slicing):**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Pantalla semáforo bienestar (Flutter) | DAC05-226 | Frontend | César Gacitúa |
-| API: Endpoint GET /api/v1/patients/{id}/wellbeing (FastAPI) | DAC05-227 | Backend | César Gacitúa |
-| DB: Modelo y migración para lecturas de signos vitales (PostgreSQL) | DAC05-228 | Base de datos | César Gacitúa |
-| QA: flutter test + flutter analyze semáforo bienestar | DAC05-229 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Semáforo bienestar | DAC05-230 | DoD / Git | César Gacitúa |
+| UI: Pantalla semáforo bienestar (Flutter) | DAC05-177 | Frontend | César Gacitúa |
+| API: Endpoint GET /api/v1/patients/{id}/wellbeing (FastAPI) | DAC05-178 | Backend | César Gacitúa |
+| DB: Modelo y migración para lecturas de signos vitales (PostgreSQL) | DAC05-179 | Base de datos | César Gacitúa |
+| QA: flutter test + flutter analyze semáforo bienestar | DAC05-180 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Semáforo bienestar | DAC05-181 | DoD / Git | César Gacitúa |
 
 ---
 
@@ -133,11 +133,11 @@ Entonces el sistema actualiza el estado y registra la hora de completado
 **Subtareas:**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Pantalla check-in y lista de tareas diarias (Flutter) | DAC05-231 | Frontend | César Gacitúa |
-| API: Endpoint check-in y tareas diarias (FastAPI) | DAC05-232 | Backend | César Gacitúa |
-| DB: Migración tablas check_in y daily_tasks (PostgreSQL) | DAC05-233 | Base de datos | César Gacitúa |
-| QA: flutter test + flutter analyze check-in | DAC05-234 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Check-in diario | DAC05-235 | DoD / Git | César Gacitúa |
+| UI: Pantalla check-in y lista de tareas diarias (Flutter) | DAC05-201 | Frontend | César Gacitúa |
+| API: Endpoint check-in y tareas diarias (FastAPI) | DAC05-202 | Backend | César Gacitúa |
+| DB: Migración tablas check_in y daily_tasks (PostgreSQL) | DAC05-203 | Base de datos | César Gacitúa |
+| QA: flutter test + flutter analyze check-in | DAC05-204 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Check-in diario | DAC05-205 | DoD / Git | César Gacitúa |
 
 ---
 
@@ -173,11 +173,11 @@ Entonces el sistema muestra solo las alertas de ese tipo
 **Subtareas:**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Pantalla centro de alertas con historial (Flutter) | DAC05-236 | Frontend | Claudia Iosue |
-| API: Endpoint GET alertas con historial (FastAPI) | DAC05-237 | Backend | Claudia Iosue |
-| DB: Modelo y migración tabla alerts (PostgreSQL) | DAC05-238 | Base de datos | Claudia Iosue |
-| QA: pytest + flutter analyze centro de alertas | DAC05-239 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Centro de alertas | DAC05-240 | DoD / Git | Claudia Iosue |
+| UI: Pantalla centro de alertas con historial (Flutter) | DAC05-187 | Frontend | Claudia Iosue |
+| API: Endpoint GET alertas con historial (FastAPI) | DAC05-188 | Backend | Claudia Iosue |
+| DB: Modelo y migración tabla alerts (PostgreSQL) | DAC05-189 | Base de datos | Claudia Iosue |
+| QA: pytest + flutter analyze centro de alertas | DAC05-190 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Centro de alertas | DAC05-191 | DoD / Git | Claudia Iosue |
 
 ---
 
@@ -216,10 +216,10 @@ Entonces el sistema reenvía la notificación al contacto secundario
 | UI: Pantalla de acción inmediata (existente) | DAC05-84 | Frontend | Franco Barra |
 | Lógica de botones de llamada (existente) | DAC05-85 | Frontend | Franco Barra |
 | Probar flujo alcanzable con app cerrada (existente) | DAC05-86 | QA | Franco Barra |
-| API: Endpoint POST alertas SOS | DAC05-241 | Backend | Franco Barra |
-| Infra: Notificación push SOS (FCM/APNs - Azure) | DAC05-242 | Infraestructura | Franco Barra |
-| QA: flutter test + pytest E2E botón SOS | DAC05-243 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Botón SOS | DAC05-244 | DoD / Git | Franco Barra |
+| API: Endpoint POST alertas SOS | DAC05-192 | Backend | Franco Barra |
+| Infra: Notificación push SOS (FCM/APNs - Azure) | DAC05-193 | Infraestructura | Franco Barra |
+| QA: flutter test + pytest E2E botón SOS | DAC05-194 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Botón SOS | DAC05-195 | DoD / Git | Franco Barra |
 
 ---
 
@@ -252,7 +252,7 @@ Cuando el adulto mayor lo ubica
 Entonces el botón es de gran tamaño, con etiqueta de voz y color rojo distintivo
 ```
 
-**Subtareas:** (compartidas con DAC05-18: DAC05-241 a 244)
+**Subtareas:** (compartidas con DAC05-18: DAC05-192 a 195)
 
 ---
 
@@ -288,11 +288,11 @@ Entonces el sistema aplica el nuevo umbral a lecturas posteriores
 **Subtareas:**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Pantalla configuración umbrales de signos vitales (Flutter) | DAC05-245 | Frontend | Franco Barra |
-| API: Endpoint CRUD umbrales de alerta (FastAPI) | DAC05-246 | Backend | Franco Barra |
-| DB: Modelo y migración tabla alert_thresholds (PostgreSQL) | DAC05-247 | Base de datos | Franco Barra |
-| QA: flutter test + flutter analyze umbrales | DAC05-248 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Umbrales de alerta | DAC05-249 | DoD / Git | Franco Barra |
+| UI: Pantalla configuración umbrales de signos vitales (Flutter) | DAC05-196 | Frontend | Franco Barra |
+| API: Endpoint CRUD umbrales de alerta (FastAPI) | DAC05-197 | Backend | Franco Barra |
+| DB: Modelo y migración tabla alert_thresholds (PostgreSQL) | DAC05-198 | Base de datos | Franco Barra |
+| QA: flutter test + flutter analyze umbrales | DAC05-199 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Umbrales de alerta | DAC05-200 | DoD / Git | Franco Barra |
 
 ---
 
@@ -328,11 +328,11 @@ Entonces el sistema genera una notificación al familiar inmediatamente
 **Subtareas:**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Formulario observaciones con foto (Flutter) | DAC05-250 | Frontend | Felipe Varas |
-| API: Endpoint POST observaciones e incidentes (FastAPI) | DAC05-251 | Backend | Felipe Varas |
-| Infra: Azure Blob Storage para fotos de observaciones | DAC05-252 | Infraestructura | Franco Barra |
-| QA: flutter test + pytest observaciones | DAC05-253 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Observaciones | DAC05-254 | DoD / Git | Felipe Varas |
+| UI: Formulario observaciones con foto (Flutter) | DAC05-206 | Frontend | Felipe Varas |
+| API: Endpoint POST observaciones e incidentes (FastAPI) | DAC05-207 | Backend | Felipe Varas |
+| Infra: Azure Blob Storage para fotos de observaciones | DAC05-208 | Infraestructura | Franco Barra |
+| QA: flutter test + pytest observaciones | DAC05-209 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Observaciones | DAC05-210 | DoD / Git | Felipe Varas |
 
 ---
 
@@ -368,11 +368,11 @@ Entonces visualiza las notas de relevo de cada cuidadora con fecha y hora
 **Subtareas:**
 | Subtarea | Clave | Capa | Responsable |
 |----------|-------|------|-------------|
-| UI: Pantalla notas de relevo de turno (Flutter) | DAC05-255 | Frontend | Felipe Varas |
-| API: Endpoint CRUD notas de relevo de turno (FastAPI) | DAC05-256 | Backend | Felipe Varas |
-| DB: Migración tabla shift_handover_notes (PostgreSQL) | DAC05-257 | Base de datos | Felipe Varas |
-| QA: flutter test + flutter analyze relevo de turno | DAC05-258 | QA | Felipe Varas |
-| PR: Peer review y merge a main - Notas de relevo | DAC05-259 | DoD / Git | Felipe Varas |
+| UI: Pantalla notas de relevo de turno (Flutter) | DAC05-216 | Frontend | Felipe Varas |
+| API: Endpoint CRUD notas de relevo de turno (FastAPI) | DAC05-217 | Backend | Felipe Varas |
+| DB: Migración tabla shift_handover_notes (PostgreSQL) | DAC05-218 | Base de datos | Felipe Varas |
+| QA: flutter test + flutter analyze relevo de turno | DAC05-219 | QA | Felipe Varas |
+| PR: Peer review y merge a main - Notas de relevo | DAC05-220 | DoD / Git | Felipe Varas |
 
 ---
 
@@ -490,5 +490,5 @@ Una historia no se considera Done sin cumplir el 100%:
 | DAC05-13 (Medicamentos OCR) | Movido a Sprint 4 (redundante con trabajo Sprint 2) |
 | César Gacitúa | Reducido de 32 a 8 puntos (delegación a Franco y Felipe) |
 | DAC05-11 Padre | Corregido: DAC05-100 (Vitals, wearable y semáforo) |
-| Claves de subtarea | Usadas claves nuevas (DAC05-226 a 259), sin reutilizar DAC05-84/85/86 |
+| Claves de subtarea | Subtareas sincronizadas y verificadas con el tablero real de Jira (DAC05-177 a DAC05-220 y existentes DAC05-84/85/86) |
 
