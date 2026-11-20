@@ -1,0 +1,221 @@
+{
+  "source_file": "2.4_Fase 2_DesarrolloProyecto_APT.docx",
+  "document_type": "docx",
+  "paragraph_count": 0,
+  "table_count": 7,
+  "headings": [],
+  "paragraphs": [],
+  "tables": [
+    [
+      [
+        "1. Resumen avance Proyecto APT"
+      ],
+      [
+        ""
+      ]
+    ],
+    [
+      [
+        "Resumen de avance proyecto APT",
+        "Resumen Ejecutivo y Contexto Cronológico: El presente informe da cuenta detallada del avance técnico, metodológico y de gobernanza del Proyecto de Título AgeCare tras el cierre formal de la Fase 1 (Entrega 1: Definición). Inmediatamente posterior a dicha entrega académica, el equipo dio inicio a la ejecución iterativa del desarrollo bajo el marco Scrum empírico (Transparencia, Inspección y Adaptación), cubriendo el ciclo completo de los Sprints 1, 2 y 3. El estado del Product Backlog, las incidencias, las ramas y los incrementos de software se encuentran auditados y registrados unívocamente entre el tablero Jira Software del proyecto (https://capstoneagecare.atlassian.net, Proyecto DAC05), los repositorios en GitHub (Backend-API, Frontend-App, Docs) y la base documental en Documentos del Equipo/ (Sprint 1, Sprint 2, Sprint 3 y Know-How). 1. Sprint 1 — Fundaciones, Setup de Infraestructura y Mocks Iniciales: • Levantamiento inicial de historias de usuario y configuración del ecosistema de ingeniería en GitHub y Jira Software bajo la clave DAC05. • Diseño de interfaces de usuario y wireframes de baja/alta fidelidad en Figma para los 4 roles del ecosistema (Familiar, Cuidadora, Médico, Adulto Mayor). • Implementación del scaffold base en Flutter/Dart con Material 3, Riverpod y go_router, operando inicialmente con datos simulados (mocks) aislados. • Hito de Inspección Metodológica (Sprint 1 Review): La revisión evidenció un diagnóstico crítico documentado en Documentos del Equipo/Sprint 2/🔄 Plan de Reorganización del Product Backlog — Sprint 2.md: de 100 issues en Jira, los 25 cerrados eran 100% frontend-only con mocks, sin persistencia ni API. La retroalimentación docente instó formalmente a \"centrarse primeramente en los issues más relevantes para el negocio\". Esto impulsó al Scrum Master a formular una reorganización profunda hacia Vertical Slicing end-to-end (UI + API + DB). 2. Sprint 2 (ID 9: \"Salud, medicamentos A\") — Core de Salud, Medicamentos y Vertical Slicing E2E: En el Sprint 2 se reorganizó el Product Backlog bajo la regla estricta de Vertical Slicing (\"tipo torta\"), donde cada Historia de Usuario atraviesa UI Flutter, API FastAPI y base de datos PostgreSQL. Se cerraron completamente 8 historias de usuario y 83 subtareas técnicas (100% Done), logrando una velocidad (Velocity) de 32 puntos Fibonacci bajo las claves Jira DAC05-3, 6, 10, 12, 14, 15, 16, 111: • Bootstrap de Backend FastAPI y PostgreSQL (DAC05-111 a DAC05-124): Creación de API asíncrona en capas con SQLAlchemy 2.0 y asyncpg, configuración centralizada con pydantic-settings, modelos ORM de dominio, entorno Alembic asíncrono (env.py) y migraciones automáticas en PostgreSQL. • Autenticación Real JWT E2E (DAC05-5 refactor): Registro, login y renovación con access tokens (15 min) y refresh tokens (7 días), hashing bcrypt, middleware de autorización por roles (RBAC), almacenamiento en flutter_secure_storage e interceptor HTTP automático 401 en Flutter. • Perfil de Paciente y Círculo de Cuidado E2E (DAC05-6 refactor): CRUD de ficha clínica y sustitución de Firebase Dynamic Links deprecado por códigos seguros de invitación de 6 dígitos con expiración de 48 horas. • Ingesta de Signos Vitales y Semáforo de Bienestar Automatizado E2E (DAC05-10 / DAC05-100): Registro de lecturas vitales (frecuencia cardíaca, SpO2, temperatura corporal), cálculo automático del semáforo de bienestar en backend (ok, warning, attention) y visualización en tiempo real en la pantalla \"Hoy\" del familiar. • Gestión de Medicamentos y Adherencia Farmacológica E2E (DAC05-12 / DAC05-101): Prescripción médica, generación automática de dosis programadas (scheduled_doses), agenda visual con cuenta regresiva, confirmación de tomas por cuidadora y cálculo instantáneo de adherencia. • Infraestructura Cloud Bicep: Plantillas modulares en infra/azure/ (main.bicep, containerapps.bicep, postgres.bicep, keyvault.bicep) para Microsoft Azure. 3. Transición de Equipo Post-Sprint 2 y Modalidad de Ingeniería Agéntica: Tras el cierre del Sprint 2 se produjo la separación del equipo humano original (Felipe Varas, Franco Barra, Claudia Iosue). Conforme a lo documentado en Documentos del Equipo/Sprint 3/Sprint_Planning_Sprint3.md y en el Plan de Realineamiento y Priorización — 4 Semanas Restantes.md, el proyecto continuó de manera individual liderado por César Gacitúa bajo una modalidad de Ingeniería Agéntica de alta productividad (1 humano + 3 agentes especializados: Agent 1 Backend, Agent 2 Frontend, Agent 3 QA/DevOps), en estricto cumplimiento del marco de Human-in-the-Loop (HITL) y el Reglamento de Uso de IA Capstone DUOC UC 2026-1. 4. Sprint 3 (ID 10 / ID 33: \"Núcleo de Salud\") — Consolidación E2E, Umbrales y Estabilización (Velocity: 34 pts): Ejecutado entre el 29 de octubre y el 05 de noviembre de 2026 bajo el Goal Jira: \"El equipo entrega la ingesta de signos vitales (wearable simulado + captura manual), el cálculo del semáforo de bienestar, la pantalla de Salud con tendencias, y la configuración de umbrales de alerta, todo con Vertical Slicing end-to-end y CI/CD refinado\". Se completaron 5 Historias E2E y Technical Enablers (34 pts Fibonacci), aislando conscientemente la bitácora de cuidadores para el Sprint 4: • DAC05-222 (8 pts) — Monitoreo de Signos Vitales del Adulto Mayor: Ingesta batch (POST /vitals/batch) e ingesta manual (POST /vitals/manual), migración de base de datos con constraint de idempotencia (uq_vital_reading_idempotent), pantalla de Salud en Flutter (/health) con tendencias interactivas (7/30/90 días), sparklines y simulador de wearable desacoplado con patrón Adapter (subtareas DAC05-232 a 236 y DAC05-275 a 278). • DAC05-223 (5 pts) — Semáforo de Bienestar en Tiempo Real: Endpoints GET /vitals/latest con in_range verificado, GET /vitals/series y algoritmo de semáforo GET /vitals/wellbeing con cálculo centralizado (ok, warning, critical, no_data) e inserción de umbrales clínicos por defecto al registrar pacientes. • DAC05-279 (5 pts) — Configuración de Umbrales de Alerta de Signos Vitales: Migración Alembic f4a2b9c1d3e4 (columnas min/max_warning y critical), endpoints CRUD GET/PUT /vitals/thresholds, y pantalla Flutter con validación matemática en tiempo real (min < max). • DAC05-285 (5 pts) & DAC05-286 (8 pts) — Plan de Medicamentos y Registro de Administración: Estabilización de modelos ORM de medicamentos, dosis programadas (scheduled_doses), registro de administración con cálculo dinámico de adherencia y soporte multi-rol. • Technical Enablers (DAC05-224 a DAC05-228, épica DAC05-97): API semáforo del día, integración de rutas protegidas, estabilización de pipelines CI/CD y despliegue continuo a Flutter Web en Vercel con tags build-9 a build-17. • Ground Truth de Calidad Técnica: 63/63 pruebas pytest pasando 100% en verde en backend; 99/99 pruebas flutter test pasando 100% en verde en frontend; migraciones Alembic al día en head; análisis estático ruff y flutter analyze limpios. Cumplimiento de Objetivos Específicos al Cierre del Sprint 3: • OE1 (Familiar - Centro de Mando Tranquilizador): Cumplido 100%. El familiar visualiza el estado de bienestar de su paciente, semáforo dinámico y gráficas de tendencias en tiempo real. • OE2 (Salud y Adherencia Farmacológica): Cumplido 100%. Prescripción médica, dosis programadas, confirmación de tomas e ingesta biométrica operativas end-to-end. • OE3 (Alertas Críticas y Umbrales): Cumplido 100%. Motor de umbrales médicos personalizados y validación de rangos clínicos seguro. • OE4 (Arquitectura Limpia, Calidad e Infraestructura): Cumplido 100%. Clean Architecture desacoplada, 162 tests automatizados verdes en CI/CD y plantillas Azure Bicep validadas."
+      ],
+      [
+        "Objetivos",
+        "Ajustes y Formalización de Objetivos del Proyecto APT: En la Fase 1 (Entrega 1), el proyecto se delimitó inicialmente al desarrollo exclusivo del frontend móvil con mocks. Durante la ejecución de los Sprints 1, 2 y 3, en concordancia con la retroalimentación docente (\"centrarse en lo más relevante para el negocio\") y los requerimientos de Alloxentric / Wellq Co, se procedió a reformular y ampliar formalmente los objetivos: 1. Objetivo General: Construir una plataforma tecnológica integral Full-Stack de teleasistencia y monitoreo remoto para personas mayores y cuidadores a distancia, compuesta por una aplicación móvil multiplataforma en Flutter/Dart, una API asíncrona de alto rendimiento en FastAPI con PostgreSQL y una arquitectura en la nube escalable en Microsoft Azure mediante IaC Bicep, garantizando la trazabilidad clínica de signos vitales, semáforo de bienestar y adherencia a medicamentos en apego a la Ley 21.805 (Chile Cuida). 2. Inclusión del Núcleo de Backend y Base de Datos: Se incorporó formalmente la construcción del backend asíncrono con autenticación JWT, RBAC, modelos relacionales persistidos y migraciones reproducibles con Alembic, superando definitivamente el alcance de mocks. 3. Priorización del Núcleo de Salud y Medicación (Paz Mental): Se concentró el esfuerzo en los requerimientos Must (Tier 1 de negocio: vitales, semáforo, medicamentos y alertas tempranas), posponiendo módulos comerciales accesorios (Marketplace avanzado, pasarelas de pago) para una etapa posterior al MVP académico. 4. Formalización del Objetivo de Calidad Continua: Se incorporó como objetivo explícito la certificación de calidad mediante suites de pruebas automatizadas (pytest y flutter test), análisis estático sin advertencias y pipelines de CI/CD."
+      ],
+      [
+        "Metodología",
+        "Ajustes Metodológicos y Marco de Gobernanza Ágil: El equipo ratificó el uso del marco Scrum empírico (Sprints de 1 a 2 semanas, Daily Scrum, Sprint Planning, Sprint Review, Sprint Retrospective y Backlog Refinement), aplicando 4 ajustes metodológicos rigurosos: 1. Vertical Slicing Obligatorio (\"Corte de Torta\"): Se prohibieron terminantemente las historias o épicas técnicas horizontales (ej. \"solo backend\" o \"solo interfaz\"). Toda Historia de Usuario en el backlog representa una capacidad funcional demostrable al usuario final que atraviesa UI en Flutter, endpoints en FastAPI y tablas en PostgreSQL. La infraestructura transversal se gestiona exclusivamente como Technical Enablers en la épica DAC05-97 Fundaciones. 2. Gobernanza Estricta de DoR y DoD: La Definición de Listo (DoR) exige cumplimiento del modelo INVEST, criterios de aceptación formalizados en BDD Gherkin (2 a 4 escenarios comprobables) y estimación Fibonacci (máx. 8 pts). La Definición de Hecho (DoD) exige: 100% pruebas automatizadas en verde (pytest y flutter test), análisis estático limpio (ruff y flutter analyze), plantillas Bicep validadas, Pull Request con Peer Review y trazabilidad Git-Jira. 3. Gobernanza de Inteligencia Artificial: Se formalizó el uso ético y transparente de herramientas de IA (Copilot, Cursor, Claude 3.5 Sonnet, GPT-4) bajo el principio \"la IA es un copiloto, no el autor final\". Se implementó el registro obligatorio en Registro_Uso_IA_Capstone.xlsx documentando herramientas, prompts, modificaciones humanas y justificaciones técnicas, prohibiendo la integración de código sin validación humana (HITL). 4. Calibración Empírica de Velocidad (Sprint Velocity): Se ajustó la capacidad del equipo a una velocidad de referencia de ~32-34 puntos Fibonacci por sprint, corrigiendo sobreestimaciones iniciales y aislando el alcance para proteger la calidad del incremento entregable."
+      ],
+      [
+        "Evidencias de avance",
+        "Evidencias de Avance Presentadas y Resguardo de la Calidad: Las siguientes evidencias tangibles acreditan el desarrollo y cumplimiento de los objetivos al cierre del Sprint 3: 1. Repositorio Backend API (Github/Backend-API): Endpoints RESTful (/patients/{id}/vitals/batch, /manual, /series, /latest, /wellbeing, /thresholds; /auth; /patients; /medications), modelos ORM SQLAlchemy (VitalReading con uq_vital_reading_idempotent, VitalThreshold con min/max warning y critical, MedicationPlan, ScheduledDose), migraciones Alembic (HEAD: f4a2b9c1d3e4) y middleware RBAC JWT con access tokens de 15 min y refresh tokens rotativos de 7 días. (Competencias C1, C2, C3). 2. Repositorio Frontend App (Github/Frontend-App): Pantalla Salud (/health), tarjetas de signos vitales, mini-gráficas sparkline de tendencia, selector temporal 7/30/90 días, widget semáforo de bienestar, pantalla de configuración de umbrales con validación reactiva (min < max) y simulador de wearable desacoplado con modos normal, SpO2 bajo y caída. Clean Architecture por feature con Riverpod y go_router. (Competencias C1, C4). 3. Suite de Pruebas Automatizadas y Análisis Estático: 63/63 pruebas backend en pytest pasando 100% en verde; 99/99 pruebas frontend en flutter test pasando 100% en verde; linters ruff check . y flutter analyze limpios sin errores ni advertencias críticas. (Competencia C6). 4. Infraestructura Cloud como Código (IaC) en Azure y Despliegue Web: Plantillas modulares en Bicep (main.bicep, containerapps.bicep, postgres.bicep, keyvault.bicep) para Container Apps y PostgreSQL Flexible Server; pipeline GitHub Actions con despliegue automático a Flutter Web en Vercel (tags build-9 a build-17). (Competencia C7). 5. Trazabilidad Jira Software y Git: Tablero Jira https://capstoneagecare.atlassian.net (Proyecto DAC05), Sprint 2 cerrado (ID 9, 32 pts), Sprint 3 ejecutado (ID 10/33, 34 pts) con historias INVEST (DAC05-222, DAC05-223, DAC05-279, DAC05-285, DAC05-286), ramas normalizadas feature/DAC05-XX-... y commits atómicos vinculados. (Competencia C5, C8). 6. Documentación del Equipo y Gobernanza de IA: Artefactos maestros en Documentos del Equipo/ (diagnostico-codigo.md, Sprint_Planning_Sprint3.md, Sprint_3_Subtareas_Completas.md, Plan de Realineamiento y Priorización — 4 Semanas Restantes.md) y Registro_Uso_IA_Capstone.xlsx documentando prompts, modelos y validación humana. Resguardo de la Calidad Disciplinar: Se implementó Clean Architecture aislando el dominio clínico; se aplicaron constraints de idempotencia en base de datos para prevenir duplicación de lecturas biométricas; se desacopló el hardware wearable mediante el patrón Adapter; y se implementó seguridad defensiva con hashing bcrypt y flutter_secure_storage."
+      ]
+    ],
+    [
+      [
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo",
+        "2. Monitoreo del Plan de Trabajo"
+      ],
+      [
+        "Competencia o unidades de competencias",
+        "Actividades",
+        "Recursos",
+        "Duración de la actividad",
+        "Responsable",
+        "Observaciones",
+        "Estado de avance",
+        "Ajustes"
+      ],
+      [
+        "C5 (Ágil)",
+        "Setup de infraestructura ágil, tableros Jira y repositorios Git (Sprint 1)",
+        "Jira Software (DAC05), GitHub, Markdown",
+        "1 sem (Sprint 1)",
+        "César Gacitúa / Claudia Iosue",
+        "Estructuración de repositorios y convenciones de ramas. Se requirió unificar nomenclatura Git-Jira.",
+        "Completado",
+        "Estandarización de claves DAC05-XX y ramas feature/<CLAVE>-desc."
+      ],
+      [
+        "C1, C4",
+        "Diseño de arquitectura inicial y wireframes por rol en Flutter (Sprint 1)",
+        "Figma, Flutter SDK, Material 3",
+        "1 sem (Sprint 1)",
+        "Felipe Varas / Franco Barra",
+        "Wireframes validados para 4 roles. Se detectó riesgo por desconexión con backend real.",
+        "Ajustada",
+        "Abandono del enfoque de mocks para orientar el trabajo a Vertical Slicing E2E."
+      ],
+      [
+        "C1, C2, C3",
+        "Bootstrap Backend FastAPI asíncrono, PostgreSQL y Alembic (Sprint 2)",
+        "Python 3.12, FastAPI, asyncpg, PostgreSQL, Docker",
+        "1 sem (Sprint 2)",
+        "César Gacitúa (Backend Dev)",
+        "Configuración de Alembic asíncrono env.py requirió pruebas iterativas. Base limpia y modular.",
+        "Completado",
+        "DAC05-111 a 124: Centralización con pydantic-settings sin secretos expuestos."
+      ],
+      [
+        "C1, C3, C4",
+        "Autenticación Real JWT y Control de Acceso por Roles (RBAC) E2E (Sprint 2)",
+        "FastAPI Auth, PyJWT, passlib, Flutter, secure_storage",
+        "1 sem (Sprint 2)",
+        "César Gacitúa / Franco Barra",
+        "Expiración de tokens resuelta con interceptor de auto-refresco 401 en Flutter sin desloguear.",
+        "Completado",
+        "Refactor DAC05-5 a Vertical Slice: conexión real de UI con backend JWT."
+      ],
+      [
+        "C1, C2, C4",
+        "Gestión del Perfil del Paciente y Círculo de Cuidado E2E (Sprint 2)",
+        "FastAPI, PostgreSQL, Flutter Riverpod, go_router",
+        "1 sem (Sprint 2)",
+        "César Gacitúa / Felipe Varas",
+        "Creación y edición de fichas clínicas del adulto mayor. Firebase Dynamic Links deprecado.",
+        "Completado",
+        "DAC05-6: Adopción de códigos de invitación de 6 dígitos con expiración 48 hrs."
+      ],
+      [
+        "C1, C2, C3, C4",
+        "Ingesta de Signos Vitales y Semáforo de Bienestar Automatizado E2E (Sprint 2)",
+        "FastAPI Vitals, PostgreSQL, Flutter Custom Widgets",
+        "2 sem (Sprint 2)",
+        "César Gacitúa / Franco Barra",
+        "Core de valor de negocio: evaluación en tiempo real de FC, SpO2 y Temp (ok/warn/critical).",
+        "Completado",
+        "DAC05-10 / DAC05-100: Cálculo centralizado en backend para consistencia multiplataforma."
+      ],
+      [
+        "C1, C2, C4",
+        "Gestión de Planes de Medicamentos y Agenda Diaria E2E (Sprint 2)",
+        "FastAPI, PostgreSQL, Flutter, local_notifications",
+        "2 sem (Sprint 2)",
+        "César Gacitúa / Claudia Iosue",
+        "Prescripción médica, agenda de tomas y confirmación de cuidadora con cálculo % adherencia.",
+        "Completado",
+        "DAC05-12 / DAC05-101: Modelado de scheduled_doses para prevenir tomas duplicadas."
+      ],
+      [
+        "C5 (Ágil)",
+        "Reorganización Agéntica y Diagnóstico Ground Truth de Código (Transición S2-S3)",
+        "Git inspection, pytest, flutter test, Markdown",
+        "Hito de transición",
+        "César Gacitúa (Scrum Master / HITL)",
+        "Separación del equipo anterior. Adopción de modalidad individual con 3 agentes especializados.",
+        "Completado",
+        "diagnostico-codigo.md: Ground truth de código real y reasignación agéntica."
+      ],
+      [
+        "C1, C2, C3, C4",
+        "Monitoreo de Signos Vitales E2E: Ingesta Batch, Manual y Pantalla Salud (Sprint 3)",
+        "FastAPI (/vitals/batch, /manual), Flutter (/health), Sparklines",
+        "2 sem (Sprint 3)",
+        "César Gacitúa (HITL) + Agent 1 & 2",
+        "Telemetría en tiempo real, selector 7/30/90 días y constraint uq_vital_reading_idempotent.",
+        "Completado",
+        "DAC05-222 (8 pts) y subtareas DAC05-232 a 236 / 275 a 278 terminadas y probadas."
+      ],
+      [
+        "C1, C3, C4",
+        "Semáforo de Bienestar en Tiempo Real y Tablero Multi-Paciente (Sprint 3)",
+        "FastAPI (/vitals/latest, /series, /wellbeing), Flutter Riverpod",
+        "2 sem (Sprint 3)",
+        "César Gacitúa (HITL) + Agent 1 & 2",
+        "Cálculo algorítmico centralizado e inserción de umbrales clínicos por defecto al crear paciente.",
+        "Completado",
+        "DAC05-223 (5 pts): Endpoints y widget semáforo funcionando en dashboard familiar."
+      ],
+      [
+        "C1, C2, C3, C4",
+        "Configuración de Umbrales de Alerta de Signos Vitales E2E (Sprint 3)",
+        "FastAPI, Alembic (f4a2b9c1d3e4), Flutter UI Slider",
+        "2 sem (Sprint 3)",
+        "César Gacitúa (HITL) + Agent 1 & 2 & 3",
+        "Umbrales warning/critical personalizables con validación matemática en tiempo real (min < max).",
+        "Completado",
+        "DAC05-279 (5 pts): Migración de base de datos, endpoints CRUD y UI reactiva."
+      ],
+      [
+        "C1, C2, C3",
+        "Plan de Medicamentos y Registro de Administración de Dosis E2E (Sprint 3)",
+        "FastAPI, SQLAlchemy, Alembic, Flutter Medications",
+        "2 sem (Sprint 3)",
+        "César Gacitúa (HITL) + Agent 1",
+        "Estabilización de modelos ORM, scheduled_doses y soporte de prescripción multi-rol.",
+        "Completado",
+        "DAC05-285 (5 pts) y DAC05-286 (8 pts): Modelado y endpoints de adherencia integrados."
+      ],
+      [
+        "C1, C4",
+        "Simulador de Wearables Configurable con Patrón Adapter (Sprint 3)",
+        "Flutter, WearableSource, FastAPI Batch",
+        "2 sem (Sprint 3)",
+        "César Gacitúa (HITL) + Agent 2",
+        "Simulación desacoplada de hardware con modos normal, SpO2 bajo y caída inyectando al backend.",
+        "Completado",
+        "DAC05-226: Interfaz abstracta WearableSource para alternar simulación y hardware."
+      ],
+      [
+        "C6, C7",
+        "CI/CD, Despliegue en Vercel, Pruebas Automatizadas y Bicep IaC (Sprint 3)",
+        "GitHub Actions, Vercel, Pytest (63), Flutter Test (99), Bicep",
+        "Continuo (S3)",
+        "César Gacitúa (HITL) + Agent 3",
+        "100% pruebas en verde (63 backend + 99 frontend). Despliegue web automatizado (build-9 a 17).",
+        "Completado",
+        "DAC05-224 a 228: Pipelines de validación continua y plantillas Azure Bicep validadas."
+      ]
+    ],
+    [
+      [
+        "3. Ajustes a partir del monitoreo"
+      ],
+      [
+        ""
+      ]
+    ],
+    [
+      [
+        "Factores que han facilitado y/o dificultado el desarrollo de mi plan de trabajo: 1. Factores Facilitadores: • Adopción temprana de Clean Architecture: La estructuración desacoplada tanto en el frontend Flutter (capas domain, data, application, presentation) como en el backend FastAPI (api, core, crud, models, schemas) facilitó el desarrollo modular en paralelo y la sustitución limpia de capas simuladas por servicios reales. • Uso Estratégico y Gobernado de Asistentes de IA: La utilización regulada de herramientas de IA (GitHub Copilot, Cursor, Claude 3.5 Sonnet, GPT-4) bajo el Reglamento Capstone DUOC UC 2026-1 aceleró la generación de scaffolds, plantillas Bicep y suites exhaustivas de pruebas, reservando el tiempo del equipo para la validación crítica, resolución de problemas y calidad de diseño. • Automatización de Pruebas y Análisis Estático: Contar con una batería automatizada (63 pruebas pytest con pytest-asyncio y 99 pruebas flutter test) y linters estrictos (ruff y flutter analyze) permitió refactorizar con confianza y garantizar cero regresiones técnicas. • Contratos de API Estandarizados (OpenAPI/Swagger): La autogeneración de esquemas interactivos en FastAPI (/docs) aseguró una comunicación clara e inmediata de contratos entre el frontend y el backend. 2. Factores Dificultadores u Obstaculizadores y Soluciones Implementadas: • Desfase inicial de enfoque en Sprint 1 (Anti-patrón horizontal): El inicio del proyecto con pantallas Flutter desconectadas de datos reales amenazó con generar falsas expectativas de avance sin valor de negocio. Solución: El Scrum Master lideró en Sprint 2 una reestructuración inmediata hacia Vertical Slicing end-to-end, transformando cada requerimiento en un incremento demostrable UI + API + DB. • Asincronía en Base de Datos y Migraciones con Alembic: Configurar SQLAlchemy 2.0 asíncrono con asyncpg y Alembic requirió resolver complejidades en env.py para ejecutar migraciones asíncronas de manera confiable. Solución: Se investigó y diseñó un arquetipo async robusto validado en contenedores Docker locales. • Dependencia de Hardware Wearable Físico: La carencia de dispositivos biométricos propietarios en laboratorio ponía en riesgo las pruebas de ingesta continua de signos vitales. Solución: Se implementó el patrón Adapter (interfaz WearableSource) y se construyó un simulador de ingesta por lote (POST /vitals/batch) con constraints de idempotencia en base de datos (uq_vital_reading_idempotent). • Variabilidad de Entornos de Ejecución: La convivencia entre el contenedor de desarrollo Ubuntu LTS (AgeCare-box) y el host NixOS presentó desafíos de librerías nativas C++ (libstdc++.so.6) para pytest. Solución: Se crearon scripts de entorno estandarizados (env-nix.sh) y wrappers CLI que garantizan la reproducibilidad idéntica de pruebas en cualquier estación."
+      ]
+    ],
+    [
+      [
+        "Actividades ajustadas o eliminadas y su Justificación: 1. Transición de Épicas Horizontales a Historias Verticales E2E (Ajuste Mayor): En el Sprint 1 se habían planificado épicas técnicas fragmentadas (\"Frontend\", \"Backend\", \"Base de Datos\"). A partir del Sprint 2 se eliminó por completo esta división horizontal y se reestructuró el backlog en épicas funcionales de negocio (DAC05-98 Auth, DAC05-99 Pacientes, DAC05-100 Vitals, DAC05-101 Medicamentos). Toda tarea técnica pasó a ser una subtarea dentro de historias verticales end-to-end, y la infraestructura transversal se canalizó como Technical Enablers en DAC05-97 Fundaciones. Justificación: Garantizar la entrega de incrementos funcionales observables y medibles por el usuario final y la comisión académica. 2. Realineación del Sprint 3 al Núcleo de Salud (Ajuste de Alcance y Aislamiento): La planificación tentativa original para Sprint 3 contemplaba abarcar bitácora de cuidadoras, tareas y chat en tiempo real. Tras el diagnóstico de código de la Fase 0 (diagnostico-codigo.md), se detectó que el Núcleo de Salud (vitales, semáforo, umbrales y medicación) requería consolidación y validación prioritaria. Por tanto, el Sprint 3 se reenfocó de forma inmutable al Núcleo de Salud (DAC05-222, DAC05-223, DAC05-279, DAC05-285, DAC05-286), aislando la operación de la cuidadora para el Sprint 4 y las alertas críticas/SOS para el Sprint 5. Justificación: Cumplir con la propuesta de valor nuclear de Alloxentric (paz mental del familiar responsable) antes de expandir la plataforma a roles secundarios. 3. Reemplazo de Firebase Dynamic Links por Códigos de 6 Dígitos (Ajuste Técnico): La planificación original contemplaba Firebase Dynamic Links para invitar familiares al círculo de cuidado. Debido al anuncio de Google de discontinuación definitiva de este servicio, se ajustó la historia DAC05-6 implementando un flujo seguro basado en códigos alfanuméricos de 6 dígitos con expiración de 48 horas persistidos en PostgreSQL. Justificación: Evitar deuda técnica inmediata y dependencias de servicios cloud en obsolescencia. 4. Actividades Pospuestas o Eliminadas de este Ciclo Académico (Matriz MoSCoW): • Módulo comercial de Marketplace y pasarela de pagos: Clasificado como Tier 4 / Won't para este ciclo. Se pospuso para etapas comerciales posteriores, dado que no agrega valor al objetivo asistencial y clínico central de la plataforma. • Módulo complejo de entretenimiento y galería multimedia interactiva para el adulto mayor: Despriorizado a ‘Could’ en favor de perfeccionar el núcleo de salud (vitales, semáforo) y la gestión estricta de adherencia a medicamentos (Tier 1 / Must)."
+      ]
+    ],
+    [
+      [
+        "Actividades no iniciadas o retrasadas, Motivos y Estrategias de Mitigación: 1. Identificación de Actividades Pospuestas o en Curso de Finalización: • Operación Diaria de la Cuidadora (Check-in, Tareas y Observaciones con foto): Planificada explícitamente para el Sprint 4 conforme al Plan de Realineamiento (Documentos del Equipo/Sprint 3/Plan de Realineamiento y Priorización — 4 Semanas Restantes.md). • Alertas Críticas Push, Botón SOS y Flujo de Caídas: Planificadas para el Sprint 5, donde se integrará el motor de alertas con Azure Notification Hubs y FCM. • Despliegue Productivo Definitivo en Azure Container Apps: La infraestructura como código está 100% escrita y validada con plantillas Bicep modulares (bicep build limpio). El aprovisionamiento productivo con dominio personalizado se ejecutará en la fase final de estabilización (Sprint 6). 2. Justificación Técnica y de Negocio: La decisión de postergar estos componentes obedeció a un criterio estricto de seguridad clínica y gestión de riesgos. En una plataforma de teleasistencia para adultos mayores dependientes, un fallo en la persistencia de signos vitales, una lectura duplicada o un error en la confirmación de fármacos representa un riesgo inaceptable. Por ello, el equipo priorizó destinar las horas de ingeniería a consolidar la robustez del modelo de datos relacional, la idempotencia transaccional y la cobertura exhaustiva de pruebas unitarias y de integración. 3. Estrategias de Mitigación para no Afectar el Proyecto APT: • Congelamiento de Alcance (Scope Freeze): El alcance funcional para la entrega final está firmemente blindado en torno al Núcleo de Salud y Medicación (Must), garantizando que no habrá dispersión de esfuerzos en requerimientos no esenciales. • Integración Agéntica con Validación Humana (HITL): Se continuará utilizando el flujo de desarrollo acelerado con agentes especializados supervisados por César Gacitúa (Scrum Master y Lead Engineer) para la ejecución de scripts de despliegue y pruebas de regresión. • Plan de Cierre Estructurado (Sprints 4, 5 y 6): Se cuenta con una asignación clara y timeboxed para completar la bitácora de cuidadoras (Sprint 4), alertas y SOS (Sprint 5) y estabilización cloud con demo final (Sprint 6), asegurando la preparación impecable de la presentación y defensa técnica individual (RA3)."
+      ]
+    ]
+  ]
+}

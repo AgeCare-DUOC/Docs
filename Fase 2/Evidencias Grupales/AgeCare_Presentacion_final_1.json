@@ -1,0 +1,350 @@
+{
+  "source_file": "AgeCare_Presentacion_final_1.pptx",
+  "document_type": "pptx",
+  "total_slides": 17,
+  "slides": [
+    {
+      "slide_number": 1,
+      "title": "Diapositiva 1",
+      "content": [
+        "PRESENTACIÓN FINAL CAPSTONE",
+        "AgeCare",
+        "Cuidado conectado para adultos mayores y sus familias",
+        "Ingeniería en Informática · Escuela de Informática y Telecomunicaciones"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 2,
+      "title": "Equipo del proyecto",
+      "content": [
+        "CI",
+        "Claudia Iosue",
+        "Scrum Master",
+        "Facilita las ceremonias y el avance de los sprints",
+        "FB",
+        "Franco Barra",
+        "QA",
+        "Asegura la calidad de cada entrega",
+        "CG",
+        "César Gacitua",
+        "Backend developer / DevOps",
+        "Trabaja en backend",
+        "FV",
+        "Felipe Varas",
+        "Frontend developer",
+        "Construye la app móvil en Flutter",
+        "Empresa: Alloxentric",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 3,
+      "title": "Descripción del proyecto",
+      "content": [
+        "El problema",
+        "Poco orden y comunicación en el monitoreo de salud, las alertas, la coordinación del cuidado y la comunicación entre familiares, cuidadores y médicos de un adulto mayor en plena era digital. Poca oferta de espacios centralizados para familiares de adultos mayores a distancia.",
+        "Nuestra propuesta",
+        "Proporcionar a las familias información confiable y en tiempo real sobre el bienestar de su ser querido, y al adulto mayor un medio accesible para mantenerse conectado, acompañado y activo. Ficha clínica digital.",
+        "UNA APP, CUATRO ROLES",
+        "Familiar",
+        "Cuidadora",
+        "Adulto mayor",
+        "Médico",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 4,
+      "title": "Objetivos",
+      "content": [
+        "OBJETIVO GENERAL",
+        "Desarrollar una plataforma digital integral de cuidado de adultos mayores que centralice el monitoreo de salud, las alertas, la coordinación del cuidado y la comunicación entre familiares, cuidadores, médicos y el propio adulto mayor, con el fin de proporcionar a las familias que cuidan a distancia información confiable y en tiempo real sobre el bienestar de su ser querido, y al adulto mayor un medio accesible para mantenerse conectado, acompañado y activo.",
+        "Expediente único",
+        "Consolidar la información de salud del adulto mayor —signos vitales del wearable, adherencia a medicamentos, observaciones de la cuidadora, incidentes y documentos médicos— en un expediente compartido, con semáforo de bienestar diario y soporte multi-paciente.",
+        "Alertas en tiempo real",
+        "Notificaciones push con umbrales configurables ante eventos críticos: caída detectada, signo vital fuera de rango y medicamento no administrado. Incluye flujo de acción inmediata ante caídas y botón SOS.",
+        "Ciclo de medicación",
+        "Plan definido por la cuidadora o el médico, digitalización de recetas mediante OCR, alarmas de tomas, confirmación de dosis y visualización de la adherencia por parte del familiar.",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 5,
+      "title": "Alcance y limitaciones",
+      "content": [
+        "5",
+        "sprints de dos semanas: 10 semanas (2,5 meses) para la versión 1",
+        "4",
+        "sprint en que comienza el piloto con usuarios reales",
+        "2",
+        "tiendas de destino: App Store y Google Play",
+        "Nuestro alcance: frontend de la aplicación móvil",
+        "Monitoreo de salud",
+        "Alertas",
+        "Medicamentos",
+        "Chat + asistente IA",
+        "Vista adulto mayor",
+        "Vista cuidadora (freemium)",
+        "Marketplace vitrina",
+        "Limitaciones",
+        "Backend y web de administración a cargo de otro equipo.\nDependencia de la entrega de endpoints: avanzamos con mocks mientras la API real está disponible.",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 6,
+      "title": "Metodología: Scrum",
+      "content": [
+        "Trabajamos sobre los tickets AGE-XXX ya definidos por Alloxentric / Wellq Co en su Plan de Desarrollo v1 (rol APP/APP-R, frontend móvil), cada uno con criterios de aceptación. No redactamos historias desde cero.",
+        "01",
+        "Planning",
+        "Al inicio de cada sprint",
+        "02",
+        "Daily stand-up",
+        "Corto, async si no calza el horario",
+        "03",
+        "Review / demo",
+        "Al cierre del sprint",
+        "04",
+        "Retrospectiva",
+        "Mejora continua del equipo",
+        "Ciclo que se repite en cada uno de los 5 sprints",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 7,
+      "title": "Flujo de desarrollo y entregas",
+      "content": [
+        "Ticket en Jira",
+        "Tablero SCRUM",
+        "Rama por ticket",
+        "Versionado en Git",
+        "Pull request",
+        "Revisado antes de integrar",
+        "Integración",
+        "GitHub Actions",
+        "Build de demo",
+        "Flutter Web en Vercel",
+        "Entregas continuas",
+        "Una build de demostración desplegada permite que la empresa monitoree el avance entre reuniones, según lo acordado en la primera reunión con Alloxentric.",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 8,
+      "title": "Cronograma: release plan",
+      "content": [
+        "1",
+        "Sprint 1",
+        "Semanas 1–2",
+        "Setup\nAutenticación y navegación",
+        "2",
+        "Sprint 2",
+        "Semanas 3–4",
+        "Vitals / wearable\nMedicamentos",
+        "3",
+        "Sprint 3",
+        "Semanas 5–6",
+        "Alertas / SOS\nBitácora / OCR",
+        "4",
+        "Sprint 4",
+        "Semanas 7–8",
+        "Chat / asistente IA\nVista adulto mayor",
+        "5",
+        "Sprint 5",
+        "Semanas 9–10",
+        "Marketplace\nQA final",
+        "Piloto con usuarios · semana 8",
+        "Entrega final · semana 10",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 9,
+      "title": "Arquitectura del software",
+      "content": [
+        "Clientes",
+        "App Flutter",
+        "Android · iOS · Riverpod · Dio",
+        "Versión web",
+        "Flutter web · Vercel",
+        "Azure · Brazil South",
+        "REST /api/v1 + JWT · WebSocket chat",
+        "Core API",
+        "FastAPI · Python 3.12 · App Service",
+        "PostgreSQL 16",
+        "SQLAlchemy 2 · asyncpg · Alembic",
+        "Blob Storage",
+        "Fotos, audios y documentos · URL SAS",
+        "Servicios externos",
+        "Firebase FCM",
+        "Notificaciones push",
+        "Claude API",
+        "Asistente IA y recetas",
+        "Azure AI Speech",
+        "Dictado y lectura en voz",
+        "Spike API",
+        "Wearables",
+        "CI/CD:  GitHub Actions · Docker / docker-compose · deploy.ps1 → Azure App Service",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 10,
+      "title": "Modelo de datos",
+      "content": [
+        "care_tasks",
+        "Tareas de cuidado",
+        "+1",
+        "vital_readings",
+        "Signos vitales",
+        "+1",
+        "medications",
+        "Plan de medicamentos",
+        "+2",
+        "scheduled_doses",
+        "Dosis programadas",
+        "users",
+        "Cualquier persona",
+        "+6",
+        "patient_members",
+        "Rol en cada paciente",
+        "patients",
+        "Expediente",
+        "+3",
+        "alerts",
+        "Alertas",
+        "sos_events",
+        "Eventos SOS",
+        "caregiver_profiles",
+        "Perfil de cuidadora",
+        "+10",
+        "observations",
+        "Bitácora diaria",
+        "+3",
+        "chat_messages",
+        "Chat y asistente IA",
+        "+7",
+        "documents",
+        "Documentos y archivos",
+        "+1",
+        "+N tablas de detalle que expanden la entidad",
+        "Relación 1 a N (la flecha apunta al lado N)",
+        "13 entidades + 34 tablas de detalle = 47 tablas",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 11,
+      "title": "Tecnologías: app, backend y base de datos",
+      "content": [
+        "App",
+        "Nuestro alcance",
+        "Flutter 3 + Dart\nuna sola base para Android, iOS y web\nRiverpod\ngestión de estado\ngo_router\nnavegación\nDio\ncliente HTTP",
+        "Backend",
+        "Contrato consumido",
+        "Python 3.12 + FastAPI\nframework de la API\nPydantic v2\nvalidación de entradas y salidas\nJWT\nautenticación con access y refresh token\nargon2\nhash de contraseñas\nWebSocket\nchat en tiempo real\nOpenAPI / Swagger\ndocumentación en /docs",
+        "Base de datos",
+        "Persistencia",
+        "PostgreSQL 16\nbase de datos relacional\nSQLAlchemy 2\nORM asíncrono\nasyncpg\ndriver de PostgreSQL\nAlembic\nmigraciones",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 12,
+      "title": "Tecnologías: infraestructura, servicios y DevOps",
+      "content": [
+        "Infraestructura",
+        "Azure · Brazil South",
+        "Azure App Service Linux\nAPI · plan B1\nAzure Database for PostgreSQL\nFlexible Server · plan B1ms\nAzure Blob Storage\nStandard LRS con URLs firmadas SAS\nVercel\nversión web · plan Hobby",
+        "Servicios externos",
+        "Integraciones",
+        "Firebase Cloud Messaging\nnotificaciones push\nClaude API\nasistente IA y lectura de recetas\nAzure AI Speech\ndictado y lectura en voz alta\nSpike API\nintegración con wearables",
+        "DevOps y herramientas",
+        "Repos, CI y despliegue",
+        "GitHub\nlos dos repositorios\nGitHub Actions\nintegración continua (CI)\nPowerShell · deploy.ps1\ndespliegue del backend\nDocker + docker-compose\nentorno local y entrega del frontend\nMermaid\ndiagramas de la página",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 13,
+      "title": "Prototipo de la aplicación",
+      "content": [
+        "Selección de rol",
+        "Familiar, cuidadora, adulto mayor o médico",
+        "Inicio del familiar",
+        "Vitales, medicamentos del día y bitácora de la cuidadora",
+        "Vista del adulto mayor",
+        "Familia, fotos, entretenimiento y mensaje de voz",
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": "Prototipo en Figma: https://www.figma.com/make/Rg7cx49DWyUHHhQ1Ua1FBI/AGECARE---Primeros-mock-ups?t=eccnN7TypQvwRhCn-0"
+    },
+    {
+      "slide_number": 14,
+      "title": "Diapositiva 14",
+      "content": [
+        "EN VIVO",
+        "Demostración del sistema",
+        "Recorrido por la app AgeCare"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 15,
+      "title": "Resultados obtenidos",
+      "content": [
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 16,
+      "title": "Obstáculos durante el desarrollo",
+      "content": [
+        "‹#›"
+      ],
+      "tables": [],
+      "notes": ""
+    },
+    {
+      "slide_number": 17,
+      "title": "Diapositiva 17",
+      "content": [
+        "¿Preguntas?",
+        "Preguntas de la comisión",
+        "Claudia Iosue  ·  Franco Barra  ·  César Gacitua  ·  Felipe Varas"
+      ],
+      "tables": [],
+      "notes": ""
+    }
+  ]
+}

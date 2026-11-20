@@ -1,0 +1,175 @@
+{
+  "source_file": "Presentacion_AgeCare_Entrega_3.pdf",
+  "document_type": "pdf",
+  "total_pages": 42,
+  "pages": [
+    {
+      "page_number": 1,
+      "text": "AgeCare: Sistema Integral de Teleasistencia y\nCuidado para Personas Mayores\nPresentación Final / Avance — Asignatura Capstone (DUOC\nUC / Alloxentric)\nCésar Gacitúa (Scrum Master & Lead Engineer)\nOctubre / Noviembre 2026"
+    },
+    {
+      "page_number": 2,
+      "text": "Diapositiva 1: Portada"
+    },
+    {
+      "page_number": 3,
+      "text": "PROYECTO “AGECARE” | PRESENTACIÓN FINAL\nCAPSTONE\n▶ Sistema Integral de Teleasistencia y Cuidado para\nPersonas Mayores\n▶ Contraparte Empresarial: Alloxentric / Wellq Co\n▶ Institución: DUOC UC — Sede Antonio Varas (Ingeniería en\nInformática)\n▶ Autor / Integrante: César Gacitúa (@ce.gacitua)\n▶ Fecha: Octubre / Noviembre 2026"
+    },
+    {
+      "page_number": 4,
+      "text": ""
+    },
+    {
+      "page_number": 5,
+      "text": "Diapositiva 2: Tecnologías Utilizadas"
+    },
+    {
+      "page_number": 6,
+      "text": "Tecnologías Utilizadas (Propósito de Negocio)\n▶ Flutter (Dart): Interfaz móvil y web multiplataforma,\naccesible y de alto contraste para personas mayores y\ncuidadores.\n▶ FastAPI (Python): API REST asíncrona de alto rendimiento\npara el procesamiento de datos clínicos y alertas.\n▶ PostgreSQL: Base de datos relacional segura para el\nalmacenamiento del expediente clínico y lecturas vitales.\n▶ Microsoft Azure: Nube empresarial (Container Apps y\nPostgreSQL Flexible Server) para alta disponibilidad.\n▶ Alembic: Gestor de migraciones que actualiza la estructura de\nla base de datos sin comprometer ni borrar la información\nhistórica de los pacientes.\n▶ Alloxentric Voice Engine: Motor de transcripción de notas\nde voz y notas de relevo de turno."
+    },
+    {
+      "page_number": 7,
+      "text": ""
+    },
+    {
+      "page_number": 8,
+      "text": "Diapositiva 3: Demostración en Vivo"
+    },
+    {
+      "page_number": 9,
+      "text": "DEMOSTRACIÓN DEL RESULTADO DEL PROYECTO\nExposición del Sistema en Vivo (~5-6 minutos): 1. Inicio y\nSemáforo de Bienestar (DAC05-223): Dashboard del familiar con\nestado integral (ok, warning, critical). 2. Pantalla de Salud y\nTendencias (DAC05-222): Navegación a /health, tarjetas de\nsignos vitales (FC, SpO2, Temperatura) y selector temporal\n7/30/90 días. 3. Simulador de Wearable (DAC05-226): Inyección\nen lote de lecturas (POST /vitals/batch) y eventos críticos\n(SpO2 bajo / caída). 4. Umbrales de Alerta (DAC05-279):\nConfiguración personalizada de rangos con validación matemática\nen tiempo real (min < max). 5. Plan de Medicamentos y\nAdherencia (DAC05-285 & DAC05-286): Configuración de dosis\npor el médico/cuidadora y confirmación de tomas por la cuidadora\ncon actualización instantánea de adherencia."
+    },
+    {
+      "page_number": 10,
+      "text": ""
+    },
+    {
+      "page_number": 11,
+      "text": "Diapositiva 4: Resultados Obtenidos"
+    },
+    {
+      "page_number": 12,
+      "text": "Resultados Obtenidos\n▶ Arquitectura E2E Integrada: Conexión asíncrona fluida\nentre Flutter, FastAPI y PostgreSQL.\n▶ Núcleo de Salud Operativo: Ingesta de signos vitales,\nsemáforo automatizado y gráficas de tendencias históricas.\n▶ Módulo de Medicamentos y Adherencia: Ciclo completo\ndesde la prescripción hasta la confirmación de tomas.\n▶ Calidad Validada: 100 % de pruebas unitarias y de\nintegración en verde (63/63 pytest, 109/109 flutter\ntest)."
+    },
+    {
+      "page_number": 13,
+      "text": ""
+    },
+    {
+      "page_number": 14,
+      "text": "Diapositiva 5: Obstáculos y Resiliencia Técnica"
+    },
+    {
+      "page_number": 15,
+      "text": "Obstáculos Presentados durante el Desarrollo\n▶ Desacoplamiento de SDKs de Wearables: Resuelto\nmediante el patrón Adapter con la interfaz abstracta\nWearableSource, permitiendo alternar entre simulación y\nhardware real sin romper la Clean Architecture.\n▶ Concurrencia en Ingesta Masiva: Mitigado mediante\nconstraints de idempotencia en base de datos\n(uq_vital_reading_idempotent) para prevenir duplicidad\nante reintentos de red.\n▶ Estabilización de Pruebas (NixOS): Resuelto mediante\ninyección de librerías nativas (libstdc++.so.6) para\ngarantizar la ejecución exitosa de pytest."
+    },
+    {
+      "page_number": 16,
+      "text": ""
+    },
+    {
+      "page_number": 17,
+      "text": "Diapositiva 6: Preguntas"
+    },
+    {
+      "page_number": 18,
+      "text": "PREGUNTAS DE LA COMISIÓN\n▶ Espacio abierto para resolver dudas técnicas, metodológicas o\nde negocio.\n▶ ¡Muchas gracias por su atención!"
+    },
+    {
+      "page_number": 19,
+      "text": ""
+    },
+    {
+      "page_number": 20,
+      "text": "Diapositiva 7: Integrantes"
+    },
+    {
+      "page_number": 21,
+      "text": "INTEGRANTES DEL PROYECTO\n▶ César Gacitúa: Scrum Master, Agent Orchestrator y Product\nOwner (HITL).\n▶ Nota metodológica: Desarrollo soportado mediante ingeniería\nagéntica especializada (Backend, Frontend, QA/DevOps) bajo\nestricta revisión humana y cumplimiento de DoD."
+    },
+    {
+      "page_number": 22,
+      "text": ""
+    },
+    {
+      "page_number": 23,
+      "text": "Diapositiva 8: Descripción del Proyecto"
+    },
+    {
+      "page_number": 24,
+      "text": "DESCRIPCIÓN DEL PROYECTO (Problema y Solución)\n▶ Problema / Dolor: Los familiares responsables que cuidan a\nadultos mayores a distancia sufren de ansiedad constante por\nno saber si sus seres queridos están bien, si tomaron sus\nmedicamentos o si sufrieron una emergencia médica.\n▶ Propuesta de Solución: AgeCare es una plataforma de\nteleasistencia integrada que ofrece un centro de mando\ntranquilizador (“Hoy”), monitoreo automatizado de signos\nvitales, semáforo de bienestar y gestión estricta de adherencia\nfarmacológica, alineada con la Ley 21.805 (Chile Cuida)."
+    },
+    {
+      "page_number": 25,
+      "text": ""
+    },
+    {
+      "page_number": 26,
+      "text": "Diapositiva 9: Objetivos"
+    },
+    {
+      "page_number": 27,
+      "text": "OBJETIVOS DEL PROYECTO\n▶ Objetivo General: Desarrollar una plataforma tecnológica de\nteleasistencia y monitoreo remoto para adultos mayores que\nbrinde paz mental a los familiares a través de trazabilidad de\nsalud y adherencia farmacológica.\n▶ Objetivos Específicos:\n1. Implementar la ingesta y visualización de signos vitales\n(wearable y manual).\n2. Automatizar el cálculo de un semáforo de bienestar en tiempo\nreal.\n3. Gestionar planes de medicamentos y registro de adherencia por\nroles.\n4. Garantizar estándares de calidad industrial (Clean Architecture,\nCI/CD, IaC Azure)."
+    },
+    {
+      "page_number": 28,
+      "text": ""
+    },
+    {
+      "page_number": 29,
+      "text": "Diapositiva 10: Alcance y Limitaciones"
+    },
+    {
+      "page_number": 30,
+      "text": "ALCANCE Y LIMITACIONES DEL PROYECTO\n▶ Alcance Funcional (MVP):\n▶ Autenticación segura y gestión de pacientes.\n▶ Módulo de salud: signos vitales, semáforo, umbrales y\ntendencias.\n▶ Módulo de medicación: plan de medicamentos, agenda de\ntomas y adherencia.\n▶ Operación de cuidadoras (check-in y observaciones).\n▶ Limitaciones:\n▶ El sistema no emite diagnósticos médicos automáticos (es un\nsoporte de teleasistencia).\n▶ El adulto mayor utiliza una interfaz accesible sin fricción de\ncredenciales (modelo Freemium: el adulto mayor nunca paga).\n▶ No incluye pasarela de pago para la marketplace en esta fase\nacadémica."
+    },
+    {
+      "page_number": 31,
+      "text": ""
+    },
+    {
+      "page_number": 32,
+      "text": "Diapositiva 11: Metodología"
+    },
+    {
+      "page_number": 33,
+      "text": "METODOLOGÍA DE TRABAJO\n▶ Marco: Scrum Empírico (Iteraciones de 2 semanas / Sprints).\n▶ Gobernanza de Requisitos: Historias de usuario bajo\nestándar INVEST y escenarios BDD Gherkin.\n▶ Vertical Slicing (“Corte de Torta”): Cada historia atraviesa\ntodas las capas (UI Flutter + API FastAPI + DB\nPostgreSQL), prohibiendo épicas técnicas horizontales.\n▶ Definición de Hecho (DoD): Pruebas 100 % en verde,\nanálisis estático limpio, infraestructura Bicep validada y\ntrazabilidad Git-Jira."
+    },
+    {
+      "page_number": 34,
+      "text": ""
+    },
+    {
+      "page_number": 35,
+      "text": "Diapositiva 12: Cronograma"
+    },
+    {
+      "page_number": 36,
+      "text": "CRONOGRAMA DE EJECUCIÓN (4 Semanas)\nFase / Hito Período Estado\nDefinición y Fase\n0 (Diagnóstico)\nSemana 1 ￿ Finalizado\nSprint 3: Núcleo\nde Salud +\nMedicamentos\nSemana 2 ￿ Finalizado (100 %\nDone)\nSprint 4:\nOperación de la\nCuidadora\n(Check-in/Tareas)\nSemana 3 ￿ En ejecución\nSprint 5 & 6:\nAlertas, SOS,\nRegresión y Demo\nFinal\nSemana 4 ￿ Planificado"
+    },
+    {
+      "page_number": 37,
+      "text": ""
+    },
+    {
+      "page_number": 38,
+      "text": "Diapositiva 13: Arquitectura"
+    },
+    {
+      "page_number": 39,
+      "text": "ARQUITECTURA DEL SOFTWARE\n▶ Frontend (Flutter): Clean Architecture por feature\n(presentation → domain ← data).\n▶ Backend (FastAPI): Arquitectura en capas asíncrona\n(routers → crud → db).\n▶ Infraestructura (Azure): Azure Container Apps +\nPostgreSQL Flexible Server mediante IaC (Bicep).\n▶ Nota clave: Las flechas de dependencia fluyen estrictamente\ndesde la UI hacia el dominio y los datos, manteniendo el\nnúcleo de negocio desacoplado de frameworks externos."
+    },
+    {
+      "page_number": 40,
+      "text": ""
+    },
+    {
+      "page_number": 41,
+      "text": "Diapositiva 14: Modelo de Datos"
+    },
+    {
+      "page_number": 42,
+      "text": "MODELO DE DATOS (Esquema Estrella)\n▶ Nomenclatura Consistente: Entidades relacionales en inglés\nnormalizado (patients, vital_readings,\nvital_thresholds, medication_plans, scheduled_doses,\nmedication_intakes).\n▶ Diseño Tipo Estrella:\n▶ Tabla de Hechos (Fact): vital_readings (registros\ntemporales de signos vitales) y medication_intakes\n(administración de dosis).\n▶ Tablas de Dimensión: patients (adulto mayor), users\n(familiares, cuidadores, médicos), vital_thresholds\n(umbrales de alerta).\n▶ Integridad: Claves foráneas con borrado en cascada (ON\nDELETE CASCADE) e índices compuestos optimizados para\nconsultas históricas en milisegundos."
+    }
+  ]
+}

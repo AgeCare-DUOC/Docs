@@ -1,0 +1,131 @@
+1. **PARTE I**
+
+| **1. Antecedentes Personales** |
+| --- |
+| A continuación, se presenta una tabla en la que debes completar la información solicitada. |
+
+| Nombre estudiante | Claudia Iosue, Franco Barra, Felipe Varas |
+| --- | --- |
+| Rut |  |
+| Carrera | Ingeniería en Informática |
+| Sede | Antonio Varas |
+
+| **2. Descripción Proyecto APT** |
+| --- |
+| En la descripción debes señalar brevemente el nombre de tu proyecto APT y las competencias del perfil de egreso que vas a poner en práctica. Si en tu carrera están definidas las áreas de desempeño, también menciona a qué áreas de desempeño está vinculado el proyecto. |
+
+| Nombre del proyecto | AgeCare – Aplicación móvil (Frontend) |
+| --- | --- |
+| Área (s) de desempeño(s) | Desarrollo de software; Análisis y evaluación de soluciones informáticas |
+| Competencias | Desarrollar una solución de software utilizando técnicas que permitan sistematizar el proceso de desarrollo y mantenimiento, asegurando el logro de los objetivos.  Construir modelos de datos para soportar los requerimientos de la organización de acuerdo a un diseño definido y escalable en el tiempo.  Realizar pruebas de certificación tanto de los productos como de los procesos utilizando buenas prácticas definidas por la industria. |
+
+| **3. Fundamentación Proyecto APT** |
+| --- |
+| A continuación, se presentan distintos campos que debes completar con la información solicitada. Esta sección busca que describas en detalle tu proyecto y justifiques su relevancia y pertinencia. |
+
+| Relevancia del proyecto APT | Chile vive una transición demográfica acelerada: un 19,7% de la población (3,99 millones de personas) tiene 60 años o más, y un 38,3% de los adultos mayores presenta algún grado de dependencia. Hoy ese cuidado a distancia recae en herramientas fragmentadas (wearables aislados, WhatsApp, recetas fotografiadas), mientras que la reciente Ley 21.805 «Chile Cuida» abre una ventana regulatoria favorable para soluciones de este tipo.  El proyecto se desarrolla en conjunto con una empresa externa (Alloxentric / Wellq Co), lo que permite enfrentar una situación profesional real: requerimientos de negocio concretos, un contrato de API ya documentado, un código base ya iniciado y un mandante que evalúa avances periódicos. |
+| --- | --- |
+| Descripción del Proyecto APT | El proyecto consiste en diseñar y desarrollar el frontend de la aplicación móvil AgeCare (iOS y Android, Flutter), con vistas diferenciadas para familiar, cuidadora, médico y adulto mayor, sobre un expediente compartido del paciente. El equipo trabaja exclusivamente el frontend; el backend (FastAPI) y el panel de administración web son desarrollados por otros equipos de la misma empresa, bajo un contrato de API ya especificado (82 endpoints documentados). |
+| Pertinencia del proyecto con el perfil de egreso | El proyecto pone en práctica el desarrollo de una solución de software real utilizando un proceso sistematizado (Scrum, control de versiones, tickets por épica), la construcción de modelos de datos del frontend alineados a un contrato de API externo, y la aplicación de pruebas y buenas prácticas de la industria (mocks, revisión de código, control de calidad) a lo largo de los 10 sprints de desarrollo. |
+| Relación con los intereses profesionales | El equipo tiene interés en el desarrollo de aplicaciones móviles y en tecnologías aplicadas a la salud y el bienestar (healthtech) especialmente por parte de Claudia que viene de un contexto del area de salud. Trabajar en AgeCare permite aplicar Flutter, gestión de estado (Riverpod), consumo de APIs REST y WebSocket, e integraciones con wearables e inteligencia artificial, en un producto con impacto social real sobre el cuidado de adultos mayores. |
+| Factibilidad de desarrollo del Proyecto APT | El proyecto es factible dentro de un semestre porque: (1) la empresa ya entrega documentación completa (objetivos, plan de desarrollo por sprint, especificación de endpoints, wireframes) y un código base Flutter ya iniciado; (2) el equipo puede avanzar contra datos simulados (mocks) sin esperar a que el backend esté listo; (3) los recursos requeridos (Flutter SDK, Figma, Jira, Git) son gratuitos y ya están disponibles; (4) la empresa acompaña el proceso con reuniones periódicas. El principal riesgo externo es la dependencia del equipo de backend para la integración final, que se mitiga trabajando con mocks durante todo el desarrollo y migrando endpoint por endpoint a medida que estén disponibles. |
+
+1. **PARTE II**
+
+| **4. Objetivos** |
+| --- |
+| En este apartado debes definir objetivos generales y específicos del Proyecto APT. Es importante aclarar que los objetivos se deben plantear en forma clara, concisa y sin dar mayores explicaciones, es decir, deben entenderse por sí solos. Se sugiere redactarlos utilizando un verbo en infinitivo, pues ello obliga a precisar acciones concretas. |
+
+| Objetivo general | Construir el frontend de la aplicación móvil AgeCare (iOS y Android) que constituye el punto de acceso principal a la plataforma, con vistas diferenciadas para el familiar, la cuidadora, el médico y el adulto mayor, poniendo el centro de mando del cuidado en el bolsillo de cada rol. |
+| --- | --- |
+| Objetivos específicos | Proporcionar al familiar un inicio tipo «Hoy» con el semáforo de bienestar, las alertas activas, el resumen de signos vitales, los medicamentos del día y la última observación, con acceso al historial completo de salud.  Ofrecer a la cuidadora una vista operativa orientada a la captura: check-in del día, confirmación de dosis, registro de observaciones e incidentes, gestión de tareas y relevo de turno.  Entregar las alertas y notificaciones push de la plataforma con la menor latencia posible, incluyendo el flujo crítico de caídas y el botón SOS.  Integrar el hub de comunicación (chat de coordinación y asistente de IA) y la vista accesible del adulto mayor, con interacción por voz, mensajes familiares, galería de fotos y entretenimiento.  Incorporar la vinculación y sincronización de wearables para la ingesta de signos vitales, así como la digitalización de recetas mediante la cámara y OCR. |
+
+| **5. Metodología** |
+| --- |
+| En el siguiente apartado deberás describir la metodología, propia de tu disciplina, que utilizarás para resolver el proyecto APT antes descrito, incluyendo las etapas y métodos de trabajo. |
+
+| Descripción de la Metodología |
+| --- |
+| El equipo trabaja con Scrum, en sprints semanales con ceremonias de planning, daily stand-up, review y retrospectiva. En lugar de redactar historias de usuario desde cero, se toman los tickets ya especificados por la empresa en su Plan de Desarrollo v1 (identificados como AGE-XXX), organizados por épica, seleccionando únicamente los que corresponden al frontend de la app móvil (rol APP/APP-R), ya que backend y panel de administración web los desarrollan otros equipos.  El avance se registra en Jira y el código en Git (rama por ticket, revisión antes de integrar). El desarrollo comienza contra datos simulados (mocks) ya incluidos en el código base, migrando a la API real a medida que el equipo de backend entrega cada endpoint. Se publican builds periódicas de la app (Flutter Web en Vercel) para que la empresa monitoree el avance entre reuniones.  Roles del equipo: Claudia – Scrum Master; Franco – QA; Felipe Varas – Frontend developer. Cada integrante es además responsable del desarrollo de los tickets asignados en su sprint, con evidencia individual trazable en Jira y Git para la evaluación diferenciada de logros. |
+
+| **6. Evidencias** |
+| --- |
+| A continuación, describe qué evidencias serán evaluadas en el informe de avance y en el informe final de tu proyecto APT. Estas evidencias deben ser acordadas con tu docente. Se entenderá por evidencia los productos que se desarrollen durante el proyecto y cuyo propósito sea visibilizar o documentar cómo se ha implementado el trabajo. |
+
+| **Tipo de evidencia**  **(avance o final)** | **Nombre de la evidencia** | **Descripción** | **Justificación** |
+| --- | --- | --- | --- |
+| Avance | Backlog en Jira (tickets APP/APP-R por épica) | Tablero con los tickets priorizados y su estado, filtrados solo al frontend de la app móvil. | Evidencia el uso de Scrum y la planificación por épica. |
+| Avance | Wireframes en Figma | Pantallas de baja y alta fidelidad de las 4 vistas por rol (familiar, cuidadora, médico, adulto mayor). | Valida el diseño de la interfaz antes de programar cada pantalla. |
+| Avance | Build de demostración (Flutter Web en Vercel) | Versión navegable de la app publicada con una URL, actualizada durante el desarrollo. | Permite el seguimiento continuo del avance por parte de la empresa mandante. |
+| Final | Código fuente en Git | Repositorio con historial de commits y ramas por ticket, siguiendo la arquitectura del código base entregado. | Evidencia el desarrollo incremental del frontend y el trabajo individual de cada integrante. |
+| Final | Aplicación funcional (build iOS/Android) | App instalable con las pantallas y flujos definidos en el alcance, integrada a la API real donde corresponda. | Demuestra el cumplimiento del objetivo general del proyecto. |
+| Final | Informe final y presentación | Documento de cierre y exposición ante la comisión evaluadora, con defensa técnica individual. | Evidencia el logro de las competencias del perfil de egreso y el dominio real del sistema desarrollado. |
+
+| **7. Plan de Trabajo** |
+| --- |
+| En la siguiente tabla define la planificación de tu Proyecto APT de acuerdo a lo requerido. |
+
+| **Plan de Trabajo Proyecto APT** | | | | | | |
+| --- | --- | --- | --- | --- | --- | --- |
+| Competencia o unidades de competencias | Nombre de Actividades/Tareas | Descripción Actividades/Tareas | Recursos | Duración de la actividad | Responsable[[1]](#footnote-0) | Observaciones |
+| Desarrollar una solución de software | Definición y wireframes (Figma) | Levantar el backlog inicial y diseñar las pantallas de baja/alta fidelidad de las 4 vistas por rol. | Figma, documentación de la empresa | 2 semanas | Equipo completo | Depende de la validación de wireframes con la empresa |
+| Desarrollar una solución de software | Setup Jira/Git + Sprint 0 | Configurar el tablero Jira, el repositorio Git y revisar la arquitectura del código base (Flutter, Riverpod, go\_router). | Jira, Git, código base agecare\_app | 2 semanas | Equipo completo | Requiere acceso al repositorio de la empresa |
+| Desarrollar una solución de software | Auth, onboarding y navegación | Implementar login, registro, invitaciones y el shell de navegación por rol. | Flutter SDK, mocks del backend | 2 semanas | Equipo completo |  |
+| Construir modelos de datos | Vitals, wearable y semáforo | Pantalla de salud (Hoy/vitales), simulador de wearable y semáforo de bienestar. | Flutter SDK, Especificación de Endpoints | 2 semanas | Equipo completo | Depende del spike de wearables |
+| Construir modelos de datos | Medicamentos y adherencia | Plan de medicamentos, agenda de dosis y alarmas locales. | Flutter SDK, mocks del backend | 2 semanas | Equipo completo |  |
+| Realizar pruebas de certificación | Alertas, push y SOS | Flujo crítico de caída, botón SOS y notificaciones push de baja latencia. | Firebase/FCM, Flutter SDK | 2 semanas | Equipo completo | Riesgo técnico alto, requiere pruebas exhaustivas |
+| Desarrollar una solución de software | Bitácora, documentos y check-in cuidadora | Observaciones, incidentes, relevo de turno y digitalización de recetas (OCR). | Flutter SDK, servicio de OCR | 2 semanas | Equipo completo | Depende del spike de OCR |
+| Desarrollar una solución de software | Chat y asistente IA | Chat de coordinación por paciente y pestaña del asistente de IA. | Flutter SDK, mocks del backend | 2 semanas | Equipo completo |  |
+| Desarrollar una solución de software | Vista del adulto mayor | Mosaicos grandes, voz primero, galería de fotos y entretenimiento curado. | Flutter SDK, Azure AI Speech (según disponibilidad) | 2 semanas | Equipo completo | Prioriza accesibilidad radical |
+| Desarrollar una solución de software | Marketplace y premium | Vitrina de cuidadoras y artículos, y flujo de planes premium (sin pagos reales). | Flutter SDK, mocks del backend | 2 semanas | Equipo completo | Alcance acotado, sin procesamiento de pagos |
+| Realizar pruebas de certificación | Integración con backend real | Migrar módulo por módulo de mocks a la API real a medida que el backend la entregue. | API FastAPI (equipo de backend) | 2 semanas | Equipo completo | Depende del avance del equipo de backend |
+| Realizar pruebas de certificación | Pruebas, ajustes y pulido | Pruebas de extremo a extremo, corrección de errores y pulido visual. | Flutter SDK, dispositivos de prueba | 3 semanas | Equipo completo |  |
+| Realizar pruebas de certificación | Ensayo y presentación final | Preparación de la demo, ensayo de la defensa técnica individual y presentación ante comisión. | Build final, informe final | 2 semanas | Equipo completo |  |
+
+| **8. Carta Gantt** |
+| --- |
+| Busca un formato de Carta Gantt que te acomode y organiza en este las actividades planificadas en el punto anterior considerando el periodo asignado para el desarrollo de tu Proyecto APT. Debes mantener la temporalidad del periodo académico en el desarrollo de las tres fases que contempla la Asignatura de Portafolio de Título. |
+
+| **Actividad** | **Fase 1** | | | | **Fase 2** | | | | | | | | | | | | **Fase 3** | | | |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **S 1** | **S 2** | **S 3** | **S 4** | **S 5** | **S 6** | **S 7** | **S 8** | **S 9** | **S 10** | **S 11** | **S 12** | **S 13** | **S 14** | **S 15** | **S 16** | | **S 17** | **S 18** |
+| Definición y wireframes (Figma) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Setup Jira/Git + Sprint 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Auth, onboarding y navegación |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Vitals, wearable y semáforo |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Medicamentos y adherencia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Alertas, push y SOS |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Bitácora, documentos, check-in cuidadora |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Chat y asistente IA |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Vista del adulto mayor |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Marketplace y premium |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Integración con backend real |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Pruebas, ajustes y pulido |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+| Ensayo y presentación final |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | |  |  |
+
+| **9. Arquitectura del Software** |
+| --- |
+| Arquitectura del frontend de la app móvil, ya definida en el código base entregado por la empresa (agecare\_app), organizada por capas dentro de cada feature. |
+| **Capa** | **Descripción** |
+| Presentation | Pantallas y widgets (Material 3), organizados por feature. |
+| Application | Providers de Riverpod: estado de sesión, paciente seleccionado y datos por pantalla. |
+| Domain | Modelos de datos de cada feature, alineados al contrato de la API. |
+| Data | Patrón Repository con dos implementaciones intercambiables: Http (backend real) y Mock (datos en memoria), según AppConfig.useMocks. |
+| Integraciones externas | Backend API (FastAPI, REST + WebSocket), Spike SDK (wearables) y Firebase/FCM (notificaciones push, almacenamiento seguro de tokens). |
+
+| **10. Modelo de Datos** |
+| --- |
+| El frontend no es dueño de la base de datos (la construye el equipo de backend); sus modelos deben calzar con el contrato de la Especificación de Endpoints Backend v1. Entidades principales que consume la app: |
+| **Entidad** | **Atributos clave** | **Relación principal** |
+| User | id, email, role | Tiene uno o más PatientMember |
+| Patient | id, name, age | Expediente compartido; soporta multi-paciente |
+| PatientMember | user\_id, patient\_id, role | Vincula un User a un Patient con un rol |
+| VitalReading | patient\_id, type, value, measured\_at | Pertenece a un Patient |
+| MedicationPlan | patient\_id, medication, dose | Genera uno o más ScheduledDose |
+| ScheduledDose | plan\_id, scheduled\_at, status | Pertenece a un MedicationPlan |
+| Alert | patient\_id, type, severity | Pertenece a un Patient |
+| Observation | patient\_id, text, created\_at | Bitácora del Patient |
+| Document | patient\_id, category, url | Pertenece a un Patient (recetas y archivos) |
+| Message | patient\_id, sender\_id, content | Pertenece a un Patient; enviado por un User |
+
+1. En caso de que el Proyecto APT sea grupal, en esta columna deben indicar el nombre de los responsables de cada tarea o actividad. Esto posteriormente permitirá diferenciar la evaluación por cada integrante. [↑](#footnote-ref-0)
