@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 821.3049999999998 1448.3009999999997" width="821.3049999999998" height="1448.3009999999997" style="--bg:#FFFFFF;--fg:#1E293B;--line:#64748B;--muted:#475569;--surface:#F8FAFC;--border:#CBD5E1;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Inicio" data-to="Login" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="420.65599999999995,76.9 420.65599999999995,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Login" data-to="Registro" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="No" points="388.05183333333326,287.9208333333333 388.05183333333326,356.525 339.2194999999999,356.525 339.2194999999999,436.825" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Login" data-to="AuthJWT" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Sí" points="453.2601666666666,287.92083333333335 453.2601666666666,356.525 502.0924999999999,356.525 502.0924999999999,526.625 446.1726666666666,526.625 446.1726666666666,538.625" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Registro" data-to="AuthJWT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="339.2194999999999,490.625 339.2194999999999,526.625 395.1393333333333,526.625 395.1393333333333,538.625" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="AuthJWT" data-to="CheckVinculo" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="420.65599999999995,592.425 420.65599999999995,640.4250000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckVinculo" data-to="CodigoInv" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="No" points="386.69333333333327,810.2383333333333 386.69333333333327,880.201 360.15274999999997,880.201 360.15274999999997,960.501" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CodigoInv" data-to="Dashboard" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="360.15274999999997,1014.3009999999999 360.15274999999997,1050.301 402.54933333333327,1050.301 402.54933333333327,1062.301" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CheckVinculo" data-to="Dashboard" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Sí" points="454.6186666666666,810.2383333333332 454.6186666666666,880.201 481.15924999999993,880.201 481.15924999999993,1050.301 438.76266666666663,1050.301 438.76266666666663,1062.301" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dashboard" data-to="HomeFamiliar" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Familiar" points="393.4959999999999,1099.2009999999998 393.4959999999999,1111.2009999999998 163.974,1111.2009999999998 163.974,1191.5009999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dashboard" data-to="HomeCuidadora" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Cuidadora" points="420.65599999999995,1099.2009999999998 420.65599999999995,1235.8009999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dashboard" data-to="HomeElder" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Adulto Mayor" points="447.8159999999999,1099.2009999999998 447.8159999999999,1111.2009999999998 667.3344999999999,1111.2009999999998 667.3344999999999,1191.5009999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HomeFamiliar" data-to="AlertaCritica" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="FCM Push Inmediato" points="163.974,1279.1009999999997 163.974,1359.4009999999996 380.39991666666657,1359.4009999999996 380.39991666666657,1371.4009999999996" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="HomeElder" data-to="AlertaCritica" data-style="dotted" data-arrow-start="false" data-arrow-end="true" data-label="Dispara Alerta" points="667.3344999999999,1279.1009999999997 667.3344999999999,1359.4009999999996 462.30824999999993,1359.4009999999996 462.30824999999993,1371.4009999999996" fill="none" stroke="var(--_line)" stroke-width="1" stroke-dasharray="4 4" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="Login" data-to="Registro" data-label="No">
+  <rect x="323.7194999999999" y="363.525" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="339.0784999999999" y="378.67499999999995" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">No</text>
+</g>
+<g class="edge-label" data-from="Login" data-to="AuthJWT" data-label="Sí">
+  <rect x="486.5924999999999" y="363.525" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="501.9514999999999" y="378.67499999999995" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Sí</text>
+</g>
+<g class="edge-label" data-from="CheckVinculo" data-to="CodigoInv" data-label="No">
+  <rect x="344.65274999999997" y="887.201" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="360.01174999999995" y="902.351" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">No</text>
+</g>
+<g class="edge-label" data-from="CheckVinculo" data-to="Dashboard" data-label="Sí">
+  <rect x="465.65924999999993" y="887.201" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="481.0182499999999" y="902.351" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Sí</text>
+</g>
+<g class="edge-label" data-from="Dashboard" data-to="HomeFamiliar" data-label="Familiar">
+  <rect x="135.974" y="1118.2009999999998" width="55.666000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="163.807" y="1133.3509999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Familiar</text>
+</g>
+<g class="edge-label" data-from="Dashboard" data-to="HomeCuidadora" data-label="Cuidadora">
+  <rect x="386.65599999999995" y="1162.5009999999997" width="67.54599999999999" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="420.429" y="1177.6509999999998" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Cuidadora</text>
+</g>
+<g class="edge-label" data-from="Dashboard" data-to="HomeElder" data-label="Adulto Mayor">
+  <rect x="626.8344999999999" y="1118.2009999999998" width="80.61400000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="667.1415" y="1133.3509999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Adulto Mayor</text>
+</g>
+<g class="edge-label" data-from="HomeFamiliar" data-to="AlertaCritica" data-label="FCM Push Inmediato">
+  <rect x="106.97399999999998" y="1322.1009999999997" width="113.28400000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="163.61599999999999" y="1337.2509999999997" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">FCM Push Inmediato</text>
+</g>
+<g class="edge-label" data-from="HomeElder" data-to="AlertaCritica" data-label="Dispara Alerta">
+  <rect x="624.3344999999999" y="1322.1009999999997" width="85.96000000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="667.3145" y="1337.2509999999997" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Dispara Alerta</text>
+</g>
+<g class="node" data-id="Inicio" data-label="Inicio de App AgeCare" data-shape="stadium">
+  <rect x="334.84349999999995" y="40" width="171.62499999999997" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.65599999999995" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Inicio de App AgeCare</text>
+</g>
+<g class="node" data-id="Login" data-label="¿Usuario Registrado?" data-shape="diamond">
+  <polygon points="420.65599999999995,124.89999999999999 518.4685,222.71249999999998 420.65599999999995,320.525 322.84349999999995,222.71249999999998" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.65599999999995" y="222.71249999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">¿Usuario Registrado?</text>
+</g>
+<g class="node" data-id="Registro" data-label="Registro con Rol
+(Familiar / Cuidadora / Médico / Adulto Mayor)" data-shape="rectangle">
+  <rect x="186.3465" y="436.825" width="305.7459999999999" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="339.2194999999999" y="463.72499999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="339.2194999999999" dy="-3.9000000000000012">Registro con Rol</tspan><tspan x="339.2194999999999" dy="16.900000000000002">(Familiar / Cuidadora / Médico / Adulto Mayor)</tspan></text>
+</g>
+<g class="node" data-id="AuthJWT" data-label="Autenticación JWT
+(/api/v1/auth/login)" data-shape="rectangle">
+  <rect x="344.10599999999994" y="538.625" width="153.1" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.65599999999995" y="565.525" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="420.65599999999995" dy="-3.9000000000000012">Autenticación JWT</tspan><tspan x="420.65599999999995" dy="16.900000000000002">(/api/v1/auth/login)</tspan></text>
+</g>
+<g class="node" data-id="CheckVinculo" data-label="¿Vinculado a Paciente?" data-shape="diamond">
+  <polygon points="420.6559999999999,640.425 522.5439999999999,742.313 420.6559999999999,844.201 318.7679999999999,742.313" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.6559999999999" y="742.313" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">¿Vinculado a Paciente?</text>
+</g>
+<g class="node" data-id="CodigoInv" data-label="Ingreso de Código de 6 Dígitos
+(Expiración 48 hrs / DAC05-6)" data-shape="rectangle">
+  <rect x="249.14624999999995" y="960.501" width="222.013" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="360.15274999999997" y="987.401" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="360.15274999999997" dy="-3.9000000000000012">Ingreso de Código de 6 Dígitos</tspan><tspan x="360.15274999999997" dy="16.900000000000002">(Expiración 48 hrs / DAC05-6)</tspan></text>
+</g>
+<g class="node" data-id="Dashboard" data-label="Dashboard" data-shape="rectangle">
+  <rect x="366.3359999999999" y="1062.301" width="108.64" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.6559999999999" y="1080.751" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Dashboard</text>
+</g>
+<g class="node" data-id="HomeFamiliar" data-label="Centro 'Hoy'
+- Semáforo de Bienestar en Vivo
+- Alertas de Caídas / Signos Vitales
+- Estado de Medicamentos" data-shape="rectangle">
+  <rect x="40" y="1191.5009999999997" width="247.94799999999995" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="163.974" y="1235.3009999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="163.974" dy="-20.8">Centro &#39;Hoy&#39;</tspan><tspan x="163.974" dy="16.900000000000002">- Semáforo de Bienestar en Vivo</tspan><tspan x="163.974" dy="16.900000000000002">- Alertas de Caídas / Signos Vitales</tspan><tspan x="163.974" dy="16.900000000000002">- Estado de Medicamentos</tspan></text>
+</g>
+<g class="node" data-id="HomeCuidadora" data-label="Bitácora Diaria
+- Confirmación de Dosis
+- Registro de Observaciones
+- Relevo de Turno" data-shape="rectangle">
+  <rect x="315.948" y="1235.8009999999997" width="209.41599999999997" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="420.65599999999995" y="1279.6009999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="420.65599999999995" dy="-20.8">Bitácora Diaria</tspan><tspan x="420.65599999999995" dy="16.900000000000002">- Confirmación de Dosis</tspan><tspan x="420.65599999999995" dy="16.900000000000002">- Registro de Observaciones</tspan><tspan x="420.65599999999995" dy="16.900000000000002">- Relevo de Turno</tspan></text>
+</g>
+<g class="node" data-id="HomeElder" data-label="Modo Simple / Accesible
+- Botón SOS de 1 Toque
+- Fotos y Familia
+- Alarmas Grandes de Remedios" data-shape="rectangle">
+  <rect x="553.3639999999999" y="1191.5009999999997" width="227.94099999999995" height="87.60000000000001" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="667.3344999999999" y="1235.3009999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="667.3344999999999" dy="-20.8">Modo Simple / Accesible</tspan><tspan x="667.3344999999999" dy="16.900000000000002">- Botón SOS de 1 Toque</tspan><tspan x="667.3344999999999" dy="16.900000000000002">- Fotos y Familia</tspan><tspan x="667.3344999999999" dy="16.900000000000002">- Alarmas Grandes de Remedios</tspan></text>
+</g>
+<g class="node" data-id="AlertaCritica" data-label="Notificación Crítica de Emergencia" data-shape="rectangle">
+  <rect x="298.49158333333327" y="1371.4009999999996" width="245.72499999999997" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="421.3540833333333" y="1389.8509999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Notificación Crítica de Emergencia</text>
+</g>
+</svg>
